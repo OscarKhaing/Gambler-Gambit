@@ -47,11 +47,11 @@ Our blackjack agent is designed to simulate the game from a player's perspective
 
 ### Q6\) Create/Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
 New work:
-- blkjckhands.csv = original datafile
-- preprocessed_blkjckhands.csv = preprocessed datafile
-- probability_data.json & refined_probability_data.json = intermediary probability data tables derived from the dataset that the agent uses (I believe I ran it twice so there are redundancy inside the files; they are not entirely accurate, but they are just for storage so the model operations are not affected)
-- model.ipynb = training and evaluation of model
-- Preprocessing.ipynb = 
+- [blkjckhands.csv](https://github.com/OscarKhaing/Gambler-Gambit/blob/Milestone2/blkjckhands.csv) = original datafile
+- [preprocessed_blkjckhands.csv](https://github.com/OscarKhaing/Gambler-Gambit/blob/Milestone2/preprocessed_blkjckhands.csv) = preprocessed datafile
+- probability_data.json & refined_probability_data.json = intermediary probability data tables derived from the dataset that the agent uses (just for storage, the model operations are not affected)
+- [model.ipynb](https://github.com/OscarKhaing/Gambler-Gambit/blob/Milestone2/model.ipynb) = training and evaluation of model
+- [Preprocessing.ipynb](https://github.com/OscarKhaing/Gambler-Gambit/blob/Milestone2/Preprocessing.ipynb) = data exploration and data preprocessing
 
 ### Q7\) Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
 Our first model has only the capability of making decisions to hit or not, so that is something to be implemented in the future with risk mechanism and amount decider. For what we have, we achieved `Simulation Results: {'win': 658, 'loss': 342}` so it definitely has significant performance.
