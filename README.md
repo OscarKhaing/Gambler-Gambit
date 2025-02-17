@@ -52,6 +52,7 @@ New work:
 - probability_data.json & refined_probability_data.json = intermediary probability data tables derived from the dataset that the agent uses (just for storage, the model operations are not affected)
 - [model.ipynb](https://github.com/OscarKhaing/Gambler-Gambit/blob/Milestone2/model.ipynb) = training and evaluation of model
 - [Preprocessing.ipynb](https://github.com/OscarKhaing/Gambler-Gambit/blob/Milestone2/Preprocessing.ipynb) = data exploration and data preprocessing
+- [blkjck_roadmap.pdf](https://github.com/OscarKhaing/Gambler-Gambit/blob/Milestone2/blkjck_roadmap.pdf) = RoadMap for Calculating CPT Table
 
 ### Q7\) Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
 Our first model has only the capability of making decisions to hit or not, so that is something to be implemented in the future with risk mechanism and amount decider. For what we have, we achieved `Simulation Results: {'win': 658, 'loss': 342}` so it definitely has significant performance.
