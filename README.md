@@ -1,3 +1,5 @@
+# Milestone 2
+---
 ### Explain what your AI agent does in terms of PEAS. What is the "world" like? 
 Our agent simulates a Vegas Triple Attack Blackjack Switch (VTABS) player with the goal of maximizing money won in the game while minimizing busting. We innovate on the regular game of Blackjack by combining it with **Triple Attack** and **Blackjack Switch**. By leveraging strategic decision-making, our model aims to improve blackjack play by balancing risk and reward while operating under uncertainty. Its success is measured through statistical performance metrics that assess its efficiency and effectiveness in achieving optimal outcomes.
 #### Features of Triple Attack
@@ -25,7 +27,11 @@ In practice, this will be done by returning a string with the action it will tak
 The actions above are chosen based on information from our agent's sensors, which include only the cards in the player's hand and the dealer’s face up card. In practice, we will simulate this by passing in this information as parameters to our agent.
 
 ### What kind of agent is it? Goal based? Utility based? etc.
-<>(TODO)
+We have a utility based agent. Its goal is to win as many games as possible to *maximize* its profit. To this end, it takes the information mentioned above as its parameters and, using the data we train it on, decides which course of action is most optimal to proceed towards this goal. Specifically, it analyzes traits we mentioned in the **Performance Measure** section and seeks to minimize or maximize them in order to achieve this goal. To elaborate:
+- We want to increase average value of its hand, but not over 20 - in other words, *balance* the value of our hands
+- We want to increase the win-to-loss ratio in units of dollars against the dealer
+- We want to minimize probability of a bust
+- We want to maximize number of rounds won based on proximity to 21
 
 ### Describe how your agent is set up and where it fits in probabilistic modeling
 <>(TODO)
