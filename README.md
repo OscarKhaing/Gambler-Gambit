@@ -61,7 +61,14 @@ The AI is structured as a **Decision Network**, an extension of a Bayesian Netwo
 - **Decision Nodes**: The AI selects actions based on probability estimates.
 - **Utility Function**: Determines the best decision by maximizing expected reward.
 
-## Parameter Estimation & Computation
+
+## Algorithms Used
+- **Bayesian Updates**: Probabilities update dynamically as new cards appear. [Parameter Estimation](#parameter-estimation--computation)
+- **Monte Carlo Simulation**: Used to compute win probabilities over multiple game scenarios. [Blackjack Q-Learning Notebook](#blackjack_qlearning.ipynb)
+- **Expected Utility Maximization**: Selects the best action based on expected rewards. [Bet Optimization](#bet-optimization-formula)
+- **Reinforcement Learning**: Optimizes decisions based on rewards from game outcomes. [Q-Learning](#q-learning-agent-for-vegas-triple-attack-blackjack-switch-vtabs)
+
+## Parameter Estimation & Computation {#bayes}
 ### Bust Probability Calculation
 Bust probability is computed as:
 
@@ -87,7 +94,7 @@ Where:
 - `D` is the dealer’s face-up card.
 - The AI simulates thousands of games to refine these estimates.
 
-### Bet Optimization Formula
+### Bet Optimization Formula {#bet}
 The AI selects the best bet size based on expected value:
 
 ```
@@ -96,7 +103,7 @@ E(B) = P(Win) * Payout - P(Lose) * Bet Amount
 
 The model dynamically adjusts bet sizes to maximize expected returns.
 
-## Q-Learning Agent for Vegas Triple Attack Blackjack Switch (VTABS)
+## Q-Learning Agent for Vegas Triple Attack Blackjack Switch (VTABS) {#qlearning}
 
 ### Steps We Used to Implement the Q-Learning Agent
 
@@ -175,12 +182,6 @@ The **Q-values** represent the **expected cumulative reward** of taking a partic
 **A higher Q-value** for an action in a given state means the agent expects a **higher reward** for choosing that action.
 
 ---
-
-## Algorithms Used
-- **Bayesian Updates**: Probabilities update dynamically as new cards appear.
-- **Monte Carlo Simulation**: Used to compute win probabilities over multiple game scenarios.
-- **Expected Utility Maximization**: Selects the best action based on expected rewards.
-- **Reinforcement Learning**: Optimizes decisions based on rewards from game outcomes.
 
 ## Conclusion/ Results
 
