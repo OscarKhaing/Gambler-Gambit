@@ -225,6 +225,28 @@ We compared the trained agent’s performance to a **random action selection str
 
 The **Q-learning agent outperforms random play**, demonstrating that reinforcement learning leads to improved decision-making.
 
+### Future Improvements
+
+#### 1. Enhancing Exploration & Training
+- Increase **training episodes** to refine Q-values.
+- Implement **decaying exploration strategies** for better learning balance.
+
+#### 2. Advanced Model Architectures
+- Extend to **Deep Q-Networks (DQN)** for more complex decision-making.
+- Incorporate **Monte Carlo methods** for better value estimation.
+
+#### 3. More Robust Reward Design
+- Introduce **progressive reward shaping** to penalize bad plays more strongly.
+- Optimize rewards for **long-term outcomes** rather than immediate returns.
+
+#### 4. Incorporating Deck Memory
+- Implement a **card-counting component** to track **deck composition**.
+- Adjust strategies based on the **probability of drawing high/low cards**.
+
+#### 5. Real-world Strategy Comparison
+- Compare the trained agent’s strategy to **professional blackjack strategies**.
+- Evaluate **whether the agent mimics human expert play** or deviates significantly.
+
 ### Final Thoughts
 This project demonstrates the application of **Q-learning in blackjack decision-making**. While the model performs better than **random play**, further refinements—such as **deep reinforcement learning, improved reward functions, and strategy comparisons**—could enhance decision-making accuracy.
 
