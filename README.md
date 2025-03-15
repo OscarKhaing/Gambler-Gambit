@@ -96,13 +96,97 @@ E(B) = P(Win) * Payout - P(Lose) * Bet Amount
 
 The model dynamically adjusts bet sizes to maximize expected returns.
 
+## Q-Learning Agent for Vegas Triple Attack Blackjack Switch (VTABS)
+
+### Steps We Used to Implement the Q-Learning Agent
+
+#### 1. Define the State Representation:
+- **Player's total hand value.**
+- **Dealer’s face-up card.**
+- **Available actions:** `Hit`, `Stand`, `Split`, `Swap`.
+
+#### 2. Define Possible Actions:
+- **Hit:** Draw another card.
+- **Stand:** End the turn.
+- **Split:** If the first two cards are identical.
+- **Swap:** Switch the second card between hands (specific to Blackjack Switch).
+
+#### 3. Define the Reward System:
+- **Winning the round** → `+1` reward.
+- **Losing the round** → `-1` reward.
+- **Bust (player exceeds 21)** → **Large penalty** (`-2`).
+- **Getting Blackjack** → **Bonus reward** (`+2`).
+- **Using strategic moves (Swap/Split) correctly** → **Additional rewards**.
+
+#### 4. Q-learning Algorithm:
+- **Initialize a Q-table.**
+- **Update the Q-values** based on state-action-reward transitions.
+- **Implement an epsilon-greedy policy** for exploration.
+
+#### 5. Training the Agent:
+- **Simulate multiple games.**
+- **Update the Q-table.**
+- **Evaluate the agent's performance.**
+
+---
+
+### How We'll Use the Q-table
+
+#### Define a function to choose the best action:
+- Given a **player's hand total** and **dealer’s face-up card**, look up the **Q-table**.
+- Select the action with the **highest Q-value** (**greedy strategy**).
+
+#### Simulate a Game Using the Q-table:
+- **Start** with an initial hand and **dealer’s face-up card**.
+- **Use the Q-table** to determine the best action at each step.
+- Continue until the **hand is finished** (`Stand` or `Bust`).
+
+---
+
+### Example: Simulated Blackjack Game Using the Trained Q-Learning Model
+
+#### **Starting Hand:**
+- **Player's sum:** `17`
+- **Dealer's face-up card:** `10`
+
+#### **Decision using Q-table:**
+- The agent **chose to Hit**.
+
+#### **Outcome:**
+- The player **drew a 5**, increasing their total to `22`.
+- **Bust!** The player lost the round.
+
+---
+
+### Understanding the Q-values in Blackjack Q-learning
+
+The **Q-values** represent the **expected cumulative reward** of taking a particular action in a given state. 
+
+#### **Each state is defined by:**
+- **The player's total hand value** (`0-31`).
+- **The dealer's face-up card** (`0-10`).
+
+#### **Each action has a corresponding Q-value:**
+- **Hit (`0`)** → Draw another card.
+- **Stand (`1`)** → End the turn.
+- **Split (`2`)** → If the first two cards are identical, create two hands.
+- **Swap (`3`)** → Swap the second card between two hands (**Blackjack Switch**).
+
+**A higher Q-value** for an action in a given state means the agent expects a **higher reward** for choosing that action.
+
+---
+
 ## Algorithms Used
 - **Bayesian Updates**: Probabilities update dynamically as new cards appear.
 - **Monte Carlo Simulation**: Used to compute win probabilities over multiple game scenarios.
 - **Expected Utility Maximization**: Selects the best action based on expected rewards.
+- **Reinforcement Learning**: Optimizes decisions based on rewards from game outcomes.
 
 ## Conclusion
 This Blackjack AI employs a **Decision Network** structure to model uncertainty and optimize decision-making. By integrating **probability calculations, simulations, and utility-based decisions**, the AI adapts dynamically to the game state, improving its ability to make strategic choices in a probabilistic environment.
+
+## Acknowledgements
+ChatGPT has been closely utilized to aid us in understanding reinforcement learning and the generation of our project
 
 ---
 
