@@ -64,7 +64,7 @@ The AI is structured as a **Decision Network**, an extension of a Bayesian Netwo
 
 ## Algorithms Used
 - **Bayesian Updates**: Probabilities update dynamically as new cards appear. [Parameter Estimation](#parameter-estimation--computation)
-- **Monte Carlo Simulation**: Used to compute win probabilities over multiple game scenarios. [Blackjack Q-Learning Notebook](#blackjack_qlearning.ipynb)
+- **Monte Carlo Simulation**: Used to compute win probabilities over multiple game scenarios. [Blackjack Q-Learning Notebook](https://github.com/OscarKhaing/Gambler-Gambit/blob/Milestone-3/blackjack_qlearning.ipynb)
 - **Expected Utility Maximization**: Selects the best action based on expected rewards. [Bet Optimization](#bet-optimization-formula)
 - **Reinforcement Learning**: Optimizes decisions based on rewards from game outcomes. [Q-Learning](#q-learning-agent-for-vegas-triple-attack-blackjack-switch-vtabs)
 
