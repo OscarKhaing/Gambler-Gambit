@@ -68,7 +68,7 @@ The AI is structured as a **Decision Network**, an extension of a Bayesian Netwo
 - **Expected Utility Maximization**: Selects the best action based on expected rewards. [Bet Optimization](#bet-optimization-formula)
 - **Reinforcement Learning**: Optimizes decisions based on rewards from game outcomes. [Q-Learning](#q-learning-agent-for-vegas-triple-attack-blackjack-switch-vtabs)
 
-## Parameter Estimation & Computation {#bayes}
+## Parameter Estimation & Computation
 ### Bust Probability Calculation
 Bust probability is computed as:
 
@@ -94,7 +94,7 @@ Where:
 - `D` is the dealer’s face-up card.
 - The AI simulates thousands of games to refine these estimates.
 
-### Bet Optimization Formula {#bet}
+### Bet Optimization Formula
 The AI selects the best bet size based on expected value:
 
 ```
@@ -103,7 +103,7 @@ E(B) = P(Win) * Payout - P(Lose) * Bet Amount
 
 The model dynamically adjusts bet sizes to maximize expected returns.
 
-## Q-Learning Agent for Vegas Triple Attack Blackjack Switch (VTABS) {#qlearning}
+## Q-Learning Agent for Vegas Triple Attack Blackjack Switch (VTABS)
 
 ### Steps We Used to Implement the Q-Learning Agent
 
